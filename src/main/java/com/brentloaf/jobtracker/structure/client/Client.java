@@ -30,8 +30,8 @@ public class Client {
         jobs.add(job);
     }
 
-    public boolean removeJob(UUID id) {
-        return jobs.removeIf(j -> j.getId().equals(id));
+    public void removeJob(UUID id) {
+        jobs.removeIf(j -> j.getId().equals(id));
     }
 
     public @Nullable Job getJob(UUID id) {
@@ -39,5 +39,26 @@ public class Client {
                 .filter(j -> j.getId().equals(id))
                 .findFirst()
                 .orElse(null);
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public @NotBlank String getName() {
+        return name;
+    }
+
+    public @NotBlank String getEmail() {
+        return email;
+    }
+
+    @Nullable
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public List<Job> getJobs() {
+        return jobs;
     }
 }

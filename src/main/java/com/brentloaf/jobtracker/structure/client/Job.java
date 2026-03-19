@@ -23,4 +23,16 @@ public class Job {
     public void updateStatus(Status status) {
         this.status = status;
     }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public @NotBlank String getDescription() {
+        return description;
+    }
 }

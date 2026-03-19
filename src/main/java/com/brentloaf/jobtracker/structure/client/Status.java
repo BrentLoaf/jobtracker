@@ -22,4 +22,8 @@ public enum Status {
                 .findFirst()
                 .orElse(null);
     }
+
+    public String getTitle() {
+        return title;
+    }
 }
